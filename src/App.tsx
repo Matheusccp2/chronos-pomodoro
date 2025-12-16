@@ -5,7 +5,7 @@ import { Container } from './components/Container';
 import { Logo } from './components/Logo';
 import { Menu } from './components/Menu';
 import { CoutnDown } from './components/CountDown';
-import { DefaultInput } from './components/DegaultInput';
+import { DefaultInput } from './components/DefaultInput';
 import { Cycles } from './components/Cycles';
 
 export default function App() {
