@@ -1,9 +1,9 @@
-
 import './styles/theme.css';
 import './styles/global.css';
 import { useState } from 'react';
 import type { TaskStateModel } from './models/TaskStateModel';
 import { Home } from './pages/Home';
+import { TaskContext } from './contexts/TaskContext';
 
 const initialState: TaskStateModel = {
   tasks: [],
@@ -16,10 +16,14 @@ const initialState: TaskStateModel = {
     shortBreakTime: 5,
     longBreakTime: 15,
   },
-}
+};
 
 export function App() {
   const [state, setState] = useState(initialState);
 
-  return <Home />;
+  return (
+    <TaskContext.Provider value={{ outraCoisa: 321 }}>
+      <Home />;
+    </TaskContext.Provider>
+  );
 }
